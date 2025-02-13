@@ -1,5 +1,5 @@
 interface Icontiner {
-    children : React.ReactNode
+    children? : React.ReactNode
 }
 
 function Container( {children} : Icontiner ) {
