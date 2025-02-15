@@ -3,7 +3,7 @@ import { ComponentProps } from "react"
 type Tvariant = "first" | "seconed"
 
 type Button = ComponentProps<"button"> & {
-  variant : Tvariant
+  variant? : Tvariant
 }
 
 function Button({children ,variant,style,  ...rest} : Button) {
@@ -17,9 +17,9 @@ function Button({children ,variant,style,  ...rest} : Button) {
 export default Button
 
 
-function setColor(variant : Tvariant) {
+function setColor(variant? : Tvariant) {
   if(variant === "first") {
-    return {backgroundColor : "blue" , color : "#fff"}
+    return {backgroundColor : "#d65858" , color : "#fff"}
   } else if(variant === "seconed") {
     return {backgroundColor : "#0F969c" , color : "#fff"}
   }

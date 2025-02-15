@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Container from "../Container/Container";
 
 function Navbar() {
@@ -14,7 +14,10 @@ function Navbar() {
                         </ul>
 
                         <div>
-                            <button> سبد خرید</button>
+                            <Link to={"/cart"}>
+                                <button className="cursor-pointer  p-2 rounded hover:bg-sky-700 hover:text-stone-50"> سبد خرید</button>
+                            </Link>
+                            
                         </div>
                     </div>
 
