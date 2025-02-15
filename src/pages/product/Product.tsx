@@ -1,3 +1,4 @@
+import Button from "../../components/button/Button";
 import Container from "../../components/Container/Container";
 
 
@@ -14,8 +15,9 @@ function Product() {
                 </div>
             </div>
 
-            <div className=" flex justify-center col-span-2 bg-sky-50  rounded-r-[10px] p-6">
+            <div className=" flex gap-5 flex-col col-span-2 bg-sky-50  rounded-r-[10px] p-6">
                 <img className="w-50 h-40 rounded-[10px]" src="https://media.istockphoto.com/id/2163019014/photo/tecnology-world-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=W-I-6efsWmXOzcesfxZD9yPTtM66gRvqNTjAZ9YBtpI=" alt="" />
+                <Button className="rounded cursor-pointer" style={{padding:"0.5rem"}} variant="seconed" onClick={()=> alert("show")} > add </Button>
             </div>
 
             
