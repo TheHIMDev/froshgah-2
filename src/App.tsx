@@ -5,20 +5,24 @@ import Store from './pages/store/Store'
 import Layout from './components/layout/Layout'
 import Product from './pages/product/Product'
 import Cart from './pages/cart/Cart'
+import { ShopingCartProvider } from './context/useShoppingCartContext'
 
 
 function App() {
-  
 
   return (
-      <Layout>
-        <Routes>
+      
+      <ShopingCartProvider>
+        <Layout>
+          <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/store' element={<Store/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path='/product/:id' element={<Product/>}> </Route>
-       </Routes>
-      </Layout>
+          </Routes>
+        </Layout>
+      </ShopingCartProvider>
+      
 
   )
 }

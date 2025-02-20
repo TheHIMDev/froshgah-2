@@ -3,7 +3,13 @@ import Container from '../../components/Container/Container'
 import Button from '../../components/button/Button'
 import CartItem from '../../components/cartItem/CartItem'
 
+
 function Cart() {
+
+  
+
+  
+
   return (
     <div className=''>
       <Container>
