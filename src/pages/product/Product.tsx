@@ -48,7 +48,7 @@ function Product() {
                     
                       </div>
                       <div className="">
-                        <Button className="rounded cursor-pointer bg-pink-500 p-2 text-stone-50" onClick={()=> {handelRemoveProductQty(param.id as string)}}>Remove</Button>
+                        <Button className="rounded cursor-pointer bg-red-700 p-2 text-stone-50 w-full"  onClick={()=> {handelRemoveProductQty(param.id as string)}}>Remove</Button>
                       </div>
                     </div>
                     
