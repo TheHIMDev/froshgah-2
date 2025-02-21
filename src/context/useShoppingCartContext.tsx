@@ -1,5 +1,6 @@
-import React, {  createContext, useContext} from "react";
+import React, {  createContext,  useContext, useEffect, useState} from "react";
 import { useLocalStorage } from "../hooks/useLocalStorege";
+import {  useNavigate } from "react-router-dom";
 
 interface ShopingCartProvider {
     children : React.ReactNode
@@ -11,7 +12,10 @@ interface ShoppingCartContext {
     handleDecreasProductQty : (id : number | string) => void,
     getProductQty : (id: number | string) => number,
     handelRemoveProductQty : (id: number | string) => void,
-    cartQty : number
+    cartQty : number,
+    isLogin : boolean ,
+    handelIsLogin : () => void,
+    handelLogout : () => void
     
 }
 
@@ -79,6 +83,30 @@ export function ShopingCartProvider({children} : ShopingCartProvider) {
 
     const cartQty = cartItems.reduce((totalQty , item)=> totalQty + item.qty,0)
 
+    const [isLogin, setIsLogin] = useState(false);
+
+    const Navigate = useNavigate()
+
+    const handelIsLogin = () => {
+        
+        setIsLogin(true)
+        localStorage.setItem("token", JSON.stringify(true))
+        Navigate("/")
+    }
+
+    const handelLogout = () => {
+        setIsLogin(false)
+    }
+
+    useEffect(()=> {
+        let token = JSON.parse(localStorage.getItem("token") as string) 
+
+        if( token ) {
+            
+            setIsLogin(true)
+        }
+    },[])
+
     return (
         <ShoppingCartContext.Provider 
         value={{
@@ -87,7 +115,10 @@ export function ShopingCartProvider({children} : ShopingCartProvider) {
             handleDecreasProductQty ,
             getProductQty ,
             handelRemoveProductQty,
-            cartQty
+            cartQty ,
+            isLogin,
+            handelIsLogin ,
+            handelLogout
         }}>
             {children}
         </ShoppingCartContext.Provider>
