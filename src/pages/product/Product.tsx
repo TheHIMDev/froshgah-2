@@ -3,7 +3,7 @@ import Button from "../../components/button/Button";
 import Container from "../../components/Container/Container";
 import { useEffect, useState } from "react";
 import { getProduct } from "../../sevices/api";
-import { Product as Iroduct } from "../../Type/servers";
+import { Product as Iproduct } from "../../Type/servers";
 import { useShoppingCartContext } from "../../context/useShoppingCartContext";
 
 
@@ -12,7 +12,7 @@ function Product() {
 
   const param = useParams<{id : string}>()
 
-  const [product , setProduct] = useState<Iroduct>()
+  const [product , setProduct] = useState<Iproduct>()
 
   const {handleIncreaseProductQty , getProductQty ,handleDecreasProductQty, cartItems , handelRemoveProductQty} = useShoppingCartContext();
 

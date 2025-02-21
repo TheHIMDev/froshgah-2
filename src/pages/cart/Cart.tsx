@@ -2,20 +2,23 @@
 import Container from '../../components/Container/Container'
 import Button from '../../components/button/Button'
 import CartItem from '../../components/cartItem/CartItem'
+import { useShoppingCartContext } from '../../context/useShoppingCartContext'
 
 
 function Cart() {
 
   
-
+  const {cartItems} = useShoppingCartContext()
   
 
   return (
     <div className=''>
       <Container>
         <div>
-            <CartItem/>
-            <CartItem/>
+          {
+            cartItems.map((item)=> <CartItem {...item}/>)
+          }
+
         </div>
 
         <div className=' flex mt-4  text-right flex-row-reverse justify-between shadow p-5'>
