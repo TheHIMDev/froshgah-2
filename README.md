@@ -1,14 +1,16 @@
 🚀 راهنمای راه‌اندازی پروژه Froshgah-2
+<br></br>
 پیش‌نیازها
+<br></br>
 نصب Node.js و npm
-
+<br></br>
 دسترسی به خط فرمان (Terminal)
 
 مراحل اجرا
 1. کلون کردن پروژه
-bash
-git clone https://github.com/TheHIMDev/froshgah-2.git
-cd froshgah-2
+bash <br></br>
+git clone https://github.com/TheHIMDev/froshgah-2.git <br></br>
+cd froshgah-2 <br></br>
 2. نصب وابستگی‌ها
 bash
 npm install
