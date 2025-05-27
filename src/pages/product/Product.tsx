@@ -16,7 +16,7 @@ function Product() {
 
   const {handleIncreaseProductQty , getProductQty ,handleDecreasProductQty, cartItems , handelRemoveProductQty} = useShoppingCartContext();
 
-  console.log(cartItems);
+  
   
 
   useEffect(()=> {
@@ -26,8 +26,8 @@ function Product() {
   return (
     <div>
       <Container>
-        <div className="h-80 mt-10 grid grid-cols-12 shadow rounded-[10px]">
-            <div className="col-span-10 p-5 text-right gap-4 flex  flex-col ">
+        <div className="flex flex-col-reverse sm:h-80 mt-10 sm:grid sm:grid-cols-12 shadow rounded-[10px]">
+            <div className="col-span-9 p-5 text-right gap-4 flex  flex-col ">
                 <h1>{product?.title} </h1>
                 <div className="gap-4 flex  flex-col">
                     <p>  قیمت : {product?.price}</p>
@@ -35,8 +35,8 @@ function Product() {
                 </div>
             </div>
 
-            <div className=" flex gap-5 flex-col col-span-2 bg-sky-50  rounded-r-[10px] p-6">
-                <img className="w-50 h-40 rounded-[10px]" src={product?.src} alt="" />
+            <div className=" flex gap-5 flex-col sm:col-span-3 bg-sky-50  rounded-r-[10px] p-6">
+                <img className="w-full object-cover h-40 rounded-[10px]" src={product?.src} alt="" />
                 {
                   getProductQty(param.id as string) === 0 ? (<Button className="rounded cursor-pointer" style={{padding:"0.5rem"}} variant="seconed" onClick={()=> {handleIncreaseProductQty(param.id as string)}} > add </Button> )
                   : (
