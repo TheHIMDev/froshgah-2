@@ -36,8 +36,8 @@ npx json-server data/db.json -p 8001 <br></br>
 
 دستورات کاربردی <br></br>
 دستور	توضیح <br></br>
-npm install	 <br></br>نصب پکیج‌ها <br></br>
-npx json-server data/db.json -p 8001 <br></br>	اجرای سرور فیک روی پورت ۸۰۰۱ <br></br>
-npm run dev <br></br>	اجرای پروژه در حالت توسعه <br></br>
+npm install	 <br></br>
+npx json-server data/db.json -p 8001 <br></br>	
+npm run dev <br></br>	
 سوال یا مشکل؟ <br></br>
 در صورت بروز هرگونه مشکل، Issue جدید در ریپازیتوری گیت‌هاب ثبت کنید. <br></br>
